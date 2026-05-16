@@ -1,9 +1,9 @@
 # Game Deals Explorer
 
 ## Group Members
-- Asim Satoof - 1211380
-- Stu
----
+- Asem Satoof - 1211380
+- Joulan Mezher - 1203196
+
 
 ## Project Description
 
