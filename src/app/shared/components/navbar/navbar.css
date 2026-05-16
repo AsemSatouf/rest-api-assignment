@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 30px;
+  background: #0b0f19; /* أعمق من الأسود */
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #4da3ff; /* أزرق حديث */
+}
+
+/* LINKS */
+.links {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #cfd6e4;
+  font-weight: 500;
+  font-size: 14px;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* hover */
+.links a:hover {
+  background: rgba(77, 163, 255, 0.12);
+  color: #4da3ff;
+}
+
+/* active */
+.active {
+  background: #4da3ff;
+  color: #0b0f19 !important;
+  box-shadow: 0 0 12px rgba(77, 163, 255, 0.4);
+}

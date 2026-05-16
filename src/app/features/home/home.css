@@ -1,0 +1,40 @@
+h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #4da3ff;
+}
+
+.hero {
+  margin-bottom: 25px;
+  padding: 20px 18px;
+
+  background: linear-gradient(135deg, #0b0f19, #121826);
+  border: 1px solid rgba(255, 255, 255, 0.959);
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.hero p {
+  margin-top: 8px;
+  color: #b8c0d4;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* spacing for page */
+:host {
+  display: block;
+  padding: 20px;
+  background: #ebecf0;
+  min-height: 100vh;
+}

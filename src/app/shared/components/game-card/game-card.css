@@ -1,0 +1,87 @@
+.card {
+  background: #121826;
+  color: white;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 340px; /* 🔥 أهم شيء توحيد الحجم */
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(77, 163, 255, 0.2);
+}
+
+/* IMAGE */
+.image-wrapper {
+  height: 180px; /* ثابت لكل الكروت */
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 سر الاحتراف */
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.content {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* TITLE */
+.title {
+  font-size: 14px;
+  font-weight: 600;
+
+  min-height: 38px; /* 🔥 تثبيت العنوان */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* PRICES */
+.prices {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.sale {
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+.normal {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 12px;
+}
+
+/* DISCOUNT */
+.discount {
+  margin-top: auto;
+  color: #00d084;
+  font-weight: bold;
+  font-size: 13px;
+}

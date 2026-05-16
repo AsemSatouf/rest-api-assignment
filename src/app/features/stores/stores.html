@@ -1,0 +1,40 @@
+<section class="page-header">
+  <h2>Game Stores</h2>
+  <p>Browse available game platforms</p>
+</section>
+
+<div *ngIf="loading">
+  <h3 class="loading">Loading stores...</h3>
+</div>
+
+<div class="grid" *ngIf="!loading">
+
+  <div class="store-card" *ngFor="let store of stores">
+
+    <img
+      class="store-logo"
+      [src]="'https://www.cheapshark.com' + store.images.logo"
+      [alt]="store.storeName"
+    />
+
+    <div class="store-header">
+
+      <h3>{{ store.storeName }}</h3>
+
+      <span class="store-id">
+        #{{ store.storeID }}
+      </span>
+
+    </div>
+
+    <span
+      class="status"
+      [ngClass]="store.isActive == 1 ? 'active' : 'inactive'">
+
+      {{ store.isActive == 1 ? 'Active' : 'Inactive' }}
+
+    </span>
+
+  </div>
+
+</div>

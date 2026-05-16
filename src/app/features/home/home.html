@@ -1,0 +1,24 @@
+<section class="hero">
+
+  <h2>Latest Game Deals</h2>
+
+  <p>
+    Discover and compare the best discounts on top games across multiple stores.
+  </p>
+
+</section>
+
+<!-- Loading -->
+<div *ngIf="loading">
+  <app-loading></app-loading>
+</div>
+
+<!-- Deals -->
+<div class="grid" *ngIf="!loading">
+
+  <app-game-card
+    *ngFor="let game of deals"
+    [game]="game">
+  </app-game-card>
+
+</div>

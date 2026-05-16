@@ -1,0 +1,51 @@
+<div *ngIf="loading">
+  <h2 class="loading">Loading...</h2>
+</div>
+
+<div *ngIf="!loading">
+
+  <!-- GAME HERO -->
+  <section class="game-hero">
+
+    <img [src]="gameInfo.thumb" class="cover">
+
+    <div class="info">
+
+      <h1>{{ gameInfo.title }}</h1>
+
+      <p class="subtitle">Compare prices across stores and find the best deal</p>
+
+      <div class="price-box">
+        <span>Cheapest Price Ever:</span>
+        <span class="price">
+          {{ cheapestDeal.price }}$
+        </span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DEALS -->
+  <h2 class="section-title">Available Deals</h2>
+
+  <div class="deals-grid">
+
+    <div class="deal-card" *ngFor="let deal of deals">
+
+      <div class="store">Store #{{ deal.storeID }}</div>
+
+      <div class="prices">
+        <p>Price: <b>{{ deal.price }}$</b></p>
+        <p class="muted">Retail: {{ deal.retailPrice }}$</p>
+      </div>
+
+      <div class="save">
+        Save {{ deal.savings | number:'1.0-0' }}%
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="card" [routerLink]="['/game', game.gameID]">
+
+  <div class="image-wrapper">
+    <img [src]="game.thumb" />
+  </div>
+
+  <div class="content">
+
+    <h3 class="title">
+      {{ game.title || game.external }}
+    </h3>
+
+    <div class="prices">
+
+      <p class="sale" *ngIf="game.salePrice">
+        {{ game.salePrice }}$
+      </p>
+
+      <p class="normal" *ngIf="game.normalPrice">
+        {{ game.normalPrice }}$
+      </p>
+
+    </div>
+
+    <p class="discount" *ngIf="game.savings">
+      Save {{ game.savings | number:'1.0-0' }}%
+    </p>
+
+  </div>
+
+</div>
